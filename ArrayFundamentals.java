@@ -62,9 +62,12 @@ public class ArrayFundamentals {
 	 * example, rotateLeft ({9, 12, 14, 43}) becomes {12, 14, 43, 9}.
 	 */
 	public static void rotateLeft(int[] nums) {
-		//
-		// TODO
-		// 
+		int temp = nums[0];
+
+		for (int i = 0; i < nums.length - 1; i++) {
+			nums[i] = nums[i + 1];
+		}
+		nums[nums.length - 1] = temp;
 	}
 
 	/**
