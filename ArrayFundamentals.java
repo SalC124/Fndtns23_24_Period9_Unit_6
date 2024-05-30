@@ -76,9 +76,12 @@ public class ArrayFundamentals {
 	 * example, rotateRight ({9, 12, 14, 43}) becomes {43, 9, 12, 14}.
 	 */
 	public static void rotateRight(int[] nums) {
-		//
-		// TODO
-		// 
+		int temp = nums[nums.length - 1];
+
+		for (int i = nums.length - 1; i > 0; i--) {
+			nums[i] = nums[i - 1];
+		}
+		nums[0] = temp;
 	}
 	
 	/**
@@ -87,10 +90,9 @@ public class ArrayFundamentals {
 	 * 8, 16, 2, 29}.
 	 */
 	public static void swap(int[] nums, int p1, int p2) {
-		//
-		// TODO
-		// 
-
+		int temp = nums[p1];
+		nums[p1] = nums[p2];
+		nums[p2] = temp;
 	}
 
 	/**
@@ -98,10 +100,11 @@ public class ArrayFundamentals {
 	 * For example, reverse ({5, 19, 2, 6}) returns {6, 2, 19, 5}.
 	 */
 	public static int[] reverse(int[] nums) {
-		//
-		// TODO
-		// 
-		return new int[0];
+		int[] rev = new int[nums.length];
+		for (int i = 0; i < nums.length; i++) {
+			rev[i] = nums[nums.length - 1 - i];
+		}
+		return rev;
 	}
 
 	/**
@@ -109,9 +112,9 @@ public class ArrayFundamentals {
 	 * For example, reverse ({5, 19, 2, 6}) changes the array to {6, 2, 19, 5}.
 	 */
 	public static void reverseInPlace(int[] nums) {
-		//
-		// TODO
-		// 
+		for (int i = 0; i < nums.length / 2; i++) {
+			swap(nums, i, nums.length - 1 - i);
+		}
 	}
 
 	/**
