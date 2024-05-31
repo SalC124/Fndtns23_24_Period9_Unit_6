@@ -1,3 +1,4 @@
+// Sal
 import java.util.Scanner;
 public class Lab_Plinko {
     public static void dropMarble(int[] slots){
